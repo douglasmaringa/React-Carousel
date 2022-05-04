@@ -1,38 +1,65 @@
-.App {
+*{
+  background-color: rgb(91, 119, 140);
+}
+.App{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.left{
+  
+  background-color: rgb(163, 170, 170);
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 500px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+.left2{
+  
+  background-color: aqua;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 500px; /* Set the width of the sidebar */
+  position:absolute; /* Fixed Sidebar (stay in place on scroll) */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+.right{
+  width: 500px;
+  margin-left: 500px;
+  background-color: rgb(122, 129, 136);
+}
+
+
+.stacking-slide {
+  height: 100vh;
+  width: 100%;
+  position: sticky;
+  top: 0;
+
+
+   &:nth-last-child(1) {
+      height: 100vh;
+   }
+}
+
+.bottom{
+  background-color: rgb(101, 101, 110);
+  height: 200px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.bottom h1{
+  font-size: 32;
+  font-weight: 700;
   color: white;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.top{
+  background-color: blue;
+  
 }
